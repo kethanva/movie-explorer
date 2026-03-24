@@ -26,6 +26,7 @@ const Navbar: React.FC = () => {
           component={Link}
           to="/"
           color={location.pathname === '/' ? 'primary' : 'inherit'}
+          sx={{ color: location.pathname === '/' ? 'primary.main' : 'text.primary' }}
         >
           Movies
         </Button>
@@ -33,6 +34,7 @@ const Navbar: React.FC = () => {
           component={Link}
           to="/favorites"
           color={location.pathname === '/favorites' ? 'primary' : 'inherit'}
+          sx={{ color: location.pathname === '/favorites' ? 'primary.main' : 'text.primary' }}
         >
           Favorites
         </Button>
