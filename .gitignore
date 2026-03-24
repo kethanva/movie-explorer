@@ -7,3 +7,4 @@ dist-ssr/
 .DS_Store
 coverage/
 *.log
+backend/app/__pycache__/*
