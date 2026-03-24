@@ -2,4 +2,5 @@
 
 docker compose up --build -d
 
-echo "FrontendApp running at http://localhost:3000"
+echo "Frontend running at http://localhost:3000"
+echo "Backend running at http://localhost:8000"
