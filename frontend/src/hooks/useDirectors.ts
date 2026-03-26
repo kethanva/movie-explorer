@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Director } from '../types';
 import { getDirectors } from '../services/directorService';
 
+// Fetch all directors
 export const useDirectors = () => {
   const [directors, setDirectors] = useState<Director[]>([]);
   const [loading, setLoading] = useState(true);

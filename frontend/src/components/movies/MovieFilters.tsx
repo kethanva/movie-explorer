@@ -17,6 +17,7 @@ interface MovieFiltersProps {
 
 const RELEASE_YEARS = Array.from({ length: 35 }, (_, i) => String(2024 - i));
 
+// Movie filter controls
 const MovieFiltersPanel: React.FC<MovieFiltersProps> = ({ filters, onChange, onClear }) => {
   const { genres } = useGenres();
   const { directors } = useDirectors();

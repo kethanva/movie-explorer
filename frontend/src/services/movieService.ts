@@ -1,10 +1,7 @@
 import { apiClient } from './api';
 import { Movie, MovieFilters, PaginatedResponse } from '../types';
 
-/**
- * Fetches a paginated list of movies with optional filters.
- * Filtering is performed server-side.
- */
+// Fetch filtered paginated movies
 export const getMovies = async (
   filters: MovieFilters = {}
 ): Promise<PaginatedResponse<Movie>> => {
@@ -15,7 +12,7 @@ export const getMovies = async (
   return response.data;
 };
 
-/** Fetches a single movie by its ID, including full cast and review details. */
+// Fetch movie by id
 export const getMovieById = async (id: number): Promise<Movie> => {
   const response = await apiClient.get<Movie>(`/api/movies/${id}`);
   return response.data;

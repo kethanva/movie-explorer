@@ -12,6 +12,7 @@ const FavoritesContext = createContext<FavoritesContextValue | undefined>(undefi
 
 const STORAGE_KEY = 'movie_explorer_saved';
 
+// Favorites context provider
 export const FavoritesProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [savedMovies, setSavedMovies] = useState<SavedMovie[]>(() => {
     try {
@@ -26,6 +27,7 @@ export const FavoritesProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     localStorage.setItem(STORAGE_KEY, JSON.stringify(savedMovies));
   }, [savedMovies]);
 
+  // Save movie to favorites
   const addMovie = (movie: Movie, status: WatchStatus) => {
     const entry: SavedMovie = {
       id: movie.id,
@@ -48,10 +50,12 @@ export const FavoritesProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     });
   };
 
+  // Remove movie from favorites
   const removeMovie = (movieId: number) => {
     setSavedMovies((prev) => prev.filter((m) => m.id !== movieId));
   };
 
+  // Check if movie is saved
   const isMovieSaved = (movieId: number) => savedMovies.some((m) => m.id === movieId);
 
   return (
@@ -61,6 +65,7 @@ export const FavoritesProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   );
 };
 
+// Access favorites context
 export const useFavorites = () => {
   const ctx = useContext(FavoritesContext);
   if (!ctx) throw new Error('useFavorites must be used within FavoritesProvider');

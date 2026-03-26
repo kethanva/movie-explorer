@@ -10,6 +10,7 @@ interface UseMoviesResult {
   error: string | null;
 }
 
+// Fetch filtered movies
 export const useMovies = (filters: MovieFilters): UseMoviesResult => {
   const [data, setData] = useState<PaginatedResponse<Movie> | null>(null);
   const [loading, setLoading] = useState(true);

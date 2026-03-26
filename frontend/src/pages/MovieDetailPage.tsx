@@ -17,6 +17,7 @@ import RatingStars from '../components/common/RatingStars';
 
 const PLACEHOLDER_POSTER = 'https://via.placeholder.com/400x600/1F1F1F/B3B3B3?text=No+Poster';
 
+// Movie detail page
 const MovieDetailPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();

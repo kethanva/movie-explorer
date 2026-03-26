@@ -12,6 +12,7 @@ interface MovieCardProps {
   movie: Movie;
 }
 
+// Single movie card
 const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
   const { addMovie, removeMovie, isMovieSaved } = useFavorites();
   const saved = isMovieSaved(movie.id);

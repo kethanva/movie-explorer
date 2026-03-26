@@ -9,6 +9,7 @@ interface RatingStarsProps {
   size?: 'small' | 'medium' | 'large';
 }
 
+// Star rating display
 const RatingStars: React.FC<RatingStarsProps> = ({
   rating,
   maxRating = 10,

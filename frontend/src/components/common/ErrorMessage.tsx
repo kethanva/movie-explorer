@@ -7,6 +7,7 @@ interface ErrorMessageProps {
   onRetry?: () => void;
 }
 
+// Error alert display
 const ErrorMessage: React.FC<ErrorMessageProps> = ({ message, onRetry }) => (
   <Box sx={{ my: 4, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
     <Alert severity="error" sx={{ width: '100%', maxWidth: 600 }}>

@@ -11,6 +11,7 @@ router = APIRouter(prefix="/api/movies", tags=["movies"])
 
 
 @router.get("", response_model=PaginatedResponse[MovieOut])
+# Fetch filtered paginated movies
 def list_movies(
     genre_id: Optional[int] = Query(None),
     director_id: Optional[int] = Query(None),
@@ -47,6 +48,7 @@ def list_movies(
 
 
 @router.get("/{movie_id}", response_model=MovieDetail)
+# Fetch movie by id
 def get_movie(movie_id: int, db: Session = Depends(get_db)):
     movie = db.query(Movie).filter(Movie.id == movie_id).first()
     if not movie:

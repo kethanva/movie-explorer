@@ -13,6 +13,7 @@ import EmptyState from '../components/common/EmptyState';
 
 const PLACEHOLDER_POSTER = 'https://via.placeholder.com/300x450/1F1F1F/B3B3B3?text=No+Poster';
 
+// Director profile page
 const DirectorProfilePage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();

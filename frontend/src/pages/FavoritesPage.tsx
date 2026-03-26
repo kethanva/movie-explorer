@@ -11,6 +11,7 @@ import EmptyState from '../components/common/EmptyState';
 
 const PLACEHOLDER_POSTER = 'https://via.placeholder.com/300x450/1F1F1F/B3B3B3?text=No+Poster';
 
+// Saved favorites page
 const FavoritesPage: React.FC = () => {
   const { savedMovies, removeMovie } = useFavorites();
 

@@ -11,6 +11,7 @@ router = APIRouter(prefix="/api/actors", tags=["actors"])
 
 
 @router.get("", response_model=PaginatedResponse[ActorOut])
+# Fetch filtered paginated actors
 def list_actors(
     movie_id: Optional[int] = Query(None),
     genre_id: Optional[int] = Query(None),
@@ -38,6 +39,7 @@ def list_actors(
 
 
 @router.get("/{actor_id}", response_model=ActorWithMovies)
+# Fetch actor by id
 def get_actor(actor_id: int, db: Session = Depends(get_db)):
     actor = db.query(Actor).filter(Actor.id == actor_id).first()
     if not actor:

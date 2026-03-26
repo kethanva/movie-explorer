@@ -3,6 +3,7 @@ import { Box, Typography, Button } from '@mui/material';
 import { Home as HomeIcon } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 
+// 404 not found page
 const NotFoundPage: React.FC = () => (
   <Box
     sx={{

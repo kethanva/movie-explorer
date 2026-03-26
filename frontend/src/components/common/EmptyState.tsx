@@ -9,6 +9,7 @@ interface EmptyStateProps {
   onAction?: () => void;
 }
 
+// Empty state placeholder
 const EmptyState: React.FC<EmptyStateProps> = ({
   title = 'Nothing found',
   message = 'Try adjusting your search or filters.',

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Director } from '../types';
 import { getDirectorById } from '../services/directorService';
 
+// Fetch single director
 export const useDirector = (id: number) => {
   const [director, setDirector] = useState<Director | null>(null);
   const [loading, setLoading] = useState(true);

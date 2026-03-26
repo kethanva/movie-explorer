@@ -3,6 +3,7 @@ import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 import { Movie as MovieIcon } from '@mui/icons-material';
 import { Link, useLocation } from 'react-router-dom';
 
+// Top navigation bar
 const Navbar: React.FC = () => {
   const location = useLocation();
 

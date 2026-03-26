@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Genre } from '../types';
 import { getGenres } from '../services/genreService';
 
+// Fetch all genres
 export const useGenres = () => {
   const [genres, setGenres] = useState<Genre[]>([]);
   const [loading, setLoading] = useState(true);

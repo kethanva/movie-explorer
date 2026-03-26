@@ -8,3 +8,4 @@ dist-ssr/
 coverage/
 *.log
 backend/app/__pycache__/*
+backend/app/routes/__pycache__/*

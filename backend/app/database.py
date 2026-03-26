@@ -12,6 +12,7 @@ class Base(DeclarativeBase):
     pass
 
 
+# Provide database session
 def get_db():
     db = SessionLocal()
     try:

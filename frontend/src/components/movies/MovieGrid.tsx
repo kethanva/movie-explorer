@@ -16,6 +16,7 @@ interface MovieGridProps {
   onClearFilters?: () => void;
 }
 
+// Paginated movie grid
 const MovieGrid: React.FC<MovieGridProps> = ({
   movies, loading, error, totalPages, currentPage, onPageChange, onClearFilters,
 }) => {

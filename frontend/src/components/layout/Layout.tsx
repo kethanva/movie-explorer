@@ -7,6 +7,7 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
+// Page layout wrapper
 const Layout: React.FC<LayoutProps> = ({ children }) => (
   <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', backgroundColor: 'background.default' }}>
     <Navbar />

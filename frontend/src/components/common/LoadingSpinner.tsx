@@ -6,6 +6,7 @@ interface LoadingSpinnerProps {
   fullPage?: boolean;
 }
 
+// Loading spinner indicator
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   message = 'Loading...',
   fullPage = false,

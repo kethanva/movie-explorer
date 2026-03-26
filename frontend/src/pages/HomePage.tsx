@@ -6,21 +6,25 @@ import { useMovies } from '../hooks/useMovies';
 import MovieFiltersPanel from '../components/movies/MovieFilters';
 import MovieGrid from '../components/movies/MovieGrid';
 
+// Movie discovery page
 const HomePage: React.FC = () => {
   const [filters, setFilters] = useState<MovieFilters>({ page: 1, per_page: 12 });
   const [search, setSearch] = useState('');
 
   const { movies, loading, error, total, totalPages } = useMovies(filters);
 
+  // Handle search submit
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFilters({ ...filters, search: search.trim() || undefined, page: 1 });
   };
 
+  // Handle filter change
   const handleFilterChange = (newFilters: MovieFilters) => {
     setFilters({ ...filters, ...newFilters, page: 1 });
   };
 
+  // Clear all filters
   const handleClearFilters = () => {
     setSearch('');
     setFilters({ page: 1, per_page: 12 });

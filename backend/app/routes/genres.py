@@ -10,5 +10,6 @@ router = APIRouter(prefix="/api/genres", tags=["genres"])
 
 
 @router.get("", response_model=List[GenreOut])
+# Fetch all genres
 def list_genres(db: Session = Depends(get_db)):
     return db.query(Genre).order_by(Genre.name).all()

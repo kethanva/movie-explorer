@@ -11,6 +11,7 @@ import DirectorProfilePage from './pages/DirectorProfilePage';
 import FavoritesPage from './pages/FavoritesPage';
 import NotFoundPage from './pages/NotFoundPage';
 
+// Root app component
 const App: React.FC = () => (
   <ThemeProvider theme={theme}>
     <CssBaseline />

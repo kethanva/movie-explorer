@@ -10,6 +10,7 @@ router = APIRouter(prefix="/api/directors", tags=["directors"])
 
 
 @router.get("", response_model=PaginatedResponse[DirectorOut])
+# Fetch paginated directors
 def list_directors(
     page: int = Query(1, ge=1),
     per_page: int = Query(20, ge=1, le=100),
@@ -34,6 +35,7 @@ def list_directors(
 
 
 @router.get("/{director_id}", response_model=DirectorWithMovies)
+# Fetch director by id
 def get_director(director_id: int, db: Session = Depends(get_db)):
     director = db.query(Director).filter(Director.id == director_id).first()
     if not director:

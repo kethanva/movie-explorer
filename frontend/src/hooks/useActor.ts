@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Actor } from '../types';
 import { getActorById } from '../services/actorService';
 
+// Fetch single actor
 export const useActor = (id: number) => {
   const [actor, setActor] = useState<Actor | null>(null);
   const [loading, setLoading] = useState(true);
