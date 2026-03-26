@@ -8,8 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint src --ext .ts,.tsx",
-    "test": "vitest run",
-    "test:watch": "vitest"
+    "test": "NODE_OPTIONS=--experimental-global-webcrypto vitest run",
+    "test:watch": "NODE_OPTIONS=--experimental-global-webcrypto vitest"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -35,6 +35,6 @@
     "jsdom": "^22.0.0",
     "typescript": "^5.4.5",
     "vite": "^4.5.3",
-    "vitest": "^0.34.6"
+    "vitest": "0.31.4"
   }
 }
